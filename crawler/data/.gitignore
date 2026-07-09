@@ -1,0 +1,5 @@
+# Служебные файлы разведчика/отладки (msp_discover.py) — не коммитим
+_discovery.txt
+_next_*.json
+_api_*.json
+_sample_*.json
