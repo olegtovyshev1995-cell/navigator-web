@@ -25,6 +25,12 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    import lxml  # noqa: F401
+    BS_PARSER = "lxml"
+except ImportError:
+    BS_PARSER = "html.parser"
+
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "data"
 OUT.mkdir(exist_ok=True)
@@ -94,7 +100,7 @@ def scan_page(url: str):
     if r.status_code >= 400:
         return
 
-    soup = BeautifulSoup(r.text, "lxml")
+    soup = BeautifulSoup(r.text, BS_PARSER)
 
     # 1) __NEXT_DATA__ (Next.js кладёт сюда данные страницы)
     nd = soup.find("script", id="__NEXT_DATA__")

@@ -53,6 +53,14 @@ try:
 except ImportError:  # pragma: no cover
     from requests.packages.urllib3.util.retry import Retry
 
+# Парсер BeautifulSoup: lxml быстрее, но на shared-хостинге часто не собирается —
+# тогда молча падаем на встроенный html.parser (без внешних зависимостей).
+try:
+    import lxml  # noqa: F401
+    BS_PARSER = "lxml"
+except ImportError:  # pragma: no cover
+    BS_PARSER = "html.parser"
+
 # ---------------------------------------------------------------------------
 # Пути / константы
 # ---------------------------------------------------------------------------
@@ -226,7 +234,7 @@ def fetch(session, url: str, timeout: int = 15):
             r.encoding = r.apparent_encoding or "utf-8"
         if "html" not in r.headers.get("Content-Type", "") and "<html" not in r.text[:500].lower():
             return None
-        return BeautifulSoup(r.text, "lxml")
+        return BeautifulSoup(r.text, BS_PARSER)
     except requests.RequestException as e:
         log.info("    не открылось (%s): %s", e.__class__.__name__, url); return None
 
