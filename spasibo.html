@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Спасибо за оплату — Навигатор мер поддержки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Onest:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5EFE6; --card:#FBF8F2; --ink:#3D2B1F; --ink2:#6B5640;
+    --muted:#8A7A66; --line:#DCD0BC; --accent:#C8865A; --ok:#4E8A5C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'Golos Text',system-ui,sans-serif;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #FBF5EC 0%, var(--bg) 55%);
+    color:var(--ink);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:24px;-webkit-font-smoothing:antialiased;
+  }
+  .card{
+    width:100%;max-width:520px;background:var(--card);
+    border:1px solid var(--line);border-radius:26px;
+    padding:44px 40px 36px;text-align:center;
+    box-shadow:0 40px 90px -30px rgba(61,43,31,.35);
+    animation:pop .5s cubic-bezier(.16,.8,.3,1) both;
+  }
+  @keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+  .badge{
+    width:76px;height:76px;margin:0 auto 22px;border-radius:50%;
+    background:linear-gradient(145deg,#5CA36C,#3E7A4E);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 16px 34px -12px rgba(62,122,78,.6);
+    animation:ring .6s ease .1s both;
+  }
+  @keyframes ring{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+  .badge svg{width:38px;height:38px;stroke:#fff;stroke-width:3.5;fill:none;
+    stroke-linecap:round;stroke-linejoin:round}
+  h1{font-family:'Onest',sans-serif;font-weight:800;font-size:27px;line-height:1.15;
+    letter-spacing:-.02em;margin-bottom:12px}
+  .sum{display:inline-block;font-family:'Onest',sans-serif;font-weight:700;
+    font-size:15px;color:var(--accent);background:#F3E7DA;
+    padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  p.lead{font-size:16px;line-height:1.6;color:var(--ink2);margin-bottom:26px}
+  .steps{text-align:left;border-top:1px solid var(--line);padding-top:24px;margin-bottom:28px}
+  .steps h2{font-family:'Onest',sans-serif;font-weight:700;font-size:14px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px}
+  .step{display:flex;gap:14px;align-items:flex-start;margin-bottom:15px}
+  .step:last-child{margin-bottom:0}
+  .step .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);
+    color:#fff;font-family:'Onest',sans-serif;font-weight:700;font-size:14px;
+    display:flex;align-items:center;justify-content:center}
+  .step .t{font-size:15px;line-height:1.5;color:var(--ink)}
+  .step .t b{color:var(--ink)}
+  .btn{display:inline-block;width:100%;background:var(--accent);color:#fff;
+    font-family:'Onest',sans-serif;font-weight:700;font-size:17px;
+    padding:16px;border-radius:14px;text-decoration:none;
+    box-shadow:0 14px 30px -12px rgba(200,134,90,.85);
+    transition:transform .18s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .verify{margin-top:18px;font-size:13px;color:var(--muted);min-height:18px}
+  .verify.ok{color:var(--ok)}
+  .contact{margin-top:22px;font-size:14px;color:var(--ink2)}
+  .contact a{color:var(--accent);font-weight:600;text-decoration:none}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=110658998","ym");
+   ym(110658998,"init",{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",accurateTrackBounce:true,trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110658998" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+  <main class="card">
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>
+    </div>
+
+    <h1>Оплата получена. Спасибо!</h1>
+    <div class="sum">Разбор мер поддержки · 5 100 ₽</div>
+    <p class="lead">
+      Мы&nbsp;получили вашу оплату персонального разбора. Теперь определим,
+      какие программы поддержки подходят именно&nbsp;вам, и&nbsp;соберём план действий.
+    </p>
+
+    <div class="steps">
+      <h2>Что дальше</h2>
+      <div class="step">
+        <div class="n">1</div>
+        <div class="t">Я&nbsp;скоро свяжусь с&nbsp;вами, чтобы уточнить оплату.</div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div class="t">Подготовьте коротко: <b>сфера деятельности, регион, что уже есть</b> (ИП/ООО/самозанятость, статус СП, если&nbsp;оформлен).</div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div class="t">Разбор проходит <b>онлайн</b>. По&nbsp;итогу — подобранные меры и&nbsp;пошаговый план подачи.</div>
+      </div>
+    </div>
+
+    <a class="btn" href="/">Вернуться на сайт</a>
+
+    <div class="verify" id="verify">Проверяем платёж…</div>
+
+    <!-- Прямой контакт для вопросов -->
+    <div class="contact">
+      Остались вопросы? Напишите в&nbsp;<a href="https://t.me/Zulfiya_probusiness" id="tg" target="_blank" rel="noopener">Telegram</a>.
+    </div>
+  </main>
+
+  <script>
+  (function(){
+    // Мягкая (неблокирующая) проверка платежа через бэкенд.
+    var el = document.getElementById('verify');
+    var raw = null;
+    try { raw = JSON.parse(localStorage.getItem('nav_pay') || 'null'); } catch(e){}
+    var params = new URLSearchParams(location.search);
+    var orderId = params.get('order_id') || (raw && raw.order_id) || '';
+
+    if (!orderId) { el.textContent = 'Оплата принята.'; return; }
+
+    var tries = 0, max = 6;
+    (function poll(){
+      tries++;
+      fetch('/api/prodamus/status.php?order_id=' + encodeURIComponent(orderId), {cache:'no-store'})
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if (d && d.paid) {
+            el.textContent = '✓ Платёж подтверждён';
+            el.className = 'verify ok';
+            try { localStorage.removeItem('nav_pay'); } catch(e){}
+          } else if (tries < max) {
+            setTimeout(poll, 2000);
+          } else {
+            el.textContent = 'Оплата принята. Подтверждение поступит в течение нескольких минут.';
+          }
+        })
+        .catch(function(){
+          if (tries < max) setTimeout(poll, 2000);
+          else el.textContent = 'Оплата принята.';
+        });
+    })();
+  })();
+  </script>
+</body>
+</html>
